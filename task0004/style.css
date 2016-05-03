@@ -1,0 +1,29 @@
+.wrap{
+	width:400px; 
+	height:200px;
+	margin:auto;
+	position:absolute;
+	left:0;right: 0;top:0;bottom:0;
+	background-color: #ccc;
+	overflow: hidden;
+}
+
+.round1{
+	width:100px;
+	height: 100px;
+	border-radius: 100%; 
+	position:absolute;
+	top:-50px;
+	left:-50px; 
+	background-color:#fc0 ;
+}
+
+.round2{
+	width:100px;
+	height: 100px;
+	border-radius: 100%; 
+	position:absolute;
+	right: -50px;
+	bottom: -50px; 
+	background-color: #fc0;
+}

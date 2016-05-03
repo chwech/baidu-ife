@@ -9,7 +9,7 @@
 	line-height: 1.5em;
 	margin: 20px 20px 0;
 	padding: 20px;
-	min-height: 442px;
+	min-height: 442px; /*关键属性，当元素设置了position:absolute后，元素脱离了标准文档流后，父元素自适应高度对其不起作用，需要设置父元素的最小高度包含它*/
 }
 .teamlogo{
 	width: 158px;
