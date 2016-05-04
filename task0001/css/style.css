@@ -38,15 +38,34 @@ ul a{
 /*主体*/
 
 #mainbody{
-	line-height: 2em;
 	
-	margin: 20px 20px;
+	position: relative;
+	line-height: 2em;
+}
+.passage img{
+	width: 25%;
+	height: 25%;
 }
 .passage,.img{
-	margin: 20px 0;
+	margin: 20px 380px 20px 20px;
 	background-color: #fff;
 	padding: 50px 20px;
-	
+}
+.img{
+	overflow: hidden;
+}
+.img img{
+	width:80%;
+	height: 80%;
+}
+
+.imgbox{
+	border: 1px solid gray;
+	width:100px;
+	height: 100px;
+	padding:15px;
+	margin: 20px 20px;
+	float: left;
 }
 
 ol{
@@ -54,10 +73,12 @@ ol{
 }
 /*侧栏*/
 #sidebar{
+	width:300px;
 	background-color: #fff;
-	margin: 20px 20px;
 	padding: 50px 20px;
-
+	position: absolute;
+	top:0;
+	right: 20px;
 }
 
 #sidebar h2{
@@ -66,7 +87,9 @@ ol{
 }
 form{
 	position: relative;
+
 }
+
 input[type=submit]{
 	font-size: 16px;
 	color: white;
@@ -74,12 +97,12 @@ input[type=submit]{
 	background-color: #06f;
 	padding: 10px 0;
 	position: absolute;
-	bottom: -50px;
+	bottom: -40px;
 	left: 0;
 	border-radius: 15px;
 }
 
-
+/*底部*/
 #foot{
 	background-color: #000;
 	text-align: center;
