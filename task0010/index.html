@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flexbox布局</title>
+	<style>
+		@media screen and (min-width: 640px) {
+			.parent{
+				background-color: #ccc;
+				padding: 20px;
+				display:flex;
+				justify-content:space-between;
+				align-items: center;
+			}
+		}
+		@media screen and (max-width: 640px) {
+			.parent{
+				background-color: #ccc;
+				padding: 20px;
+				display:flex;
+				flex-flow:row wrap;
+				align-items:flex-start;
+				justify-content: space-between;
+			}
+
+			.item4{
+				margin-bottom: 20px;
+				order:-1;
+			}
+		}
+		
+		.item1{
+			width:150px;
+			border:1px solid #f00;
+			height: 120px;
+		}
+		.item2{
+			width:150px;
+			border:1px solid #f00;
+			height: 100px;
+		}
+		.item3{
+			width:150px;
+			border:1px solid #f00;
+			height: 40px;
+		}
+		.item4{
+			width:150px;
+			border:1px solid #f00;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="item1">item1</div>
+		<div class="item2">item2</div>
+		<div class="item3">item3</div>
+		<div class="item4">item4</div>
+	</div>
+</body>
+</html>
