@@ -9,7 +9,7 @@
 1. document.getElementById("id")  
 通过id获取元素对象
 2. element.childNodes  
-用来获取任何一个元素所有子元素，返回一个数组。
+用来获取任何一个元素所有子元素，返回一个数组。  
 3. node.nodeType  
 有12种类型值，其中:
 
@@ -18,12 +18,14 @@
     - 文本节点的nodeType属性值是3。
 	
 4. node.nodeValue  
-获取或设置节点的值  
-节点类型|nodeValue
----|---|---
-Element(元素节点)| null
-Attr(属性节点)|属性的值
-Text(文本节点)|节点所包含的文本
+获取或设置节点的值   
+  
+		|     节点类型    |nodeValue|
+		|-----------------|---------|
+		|Element(元素节点)| null    |
+		|  Attr(属性节点) |属性的值 |
+		|  Text(文本节点) |节点所包含的文本|  
+
 5. 数组方法slice()  
 截取数组或字符串，接收一个或两个参数：
 
