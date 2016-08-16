@@ -1,15 +1,15 @@
 /*reset*/
-html,body,div{
+html,body,div,section{
 	margin: 0;
 	padding: 0;
 }
 /*header*/
 .header{
+	padding:10px 0 10px 50px;
 	background: #2189bf;
 }
 .header .logo{
-	margin-top: 10px;
-	margin-left: 50px;
+
 	width: 34px;
 	height: 34px;
 	position: relative;
