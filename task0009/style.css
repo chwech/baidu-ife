@@ -1,0 +1,49 @@
+/*reset*/
+html,body,div{
+	margin: 0;
+	padding: 0;
+}
+/*header*/
+.header{
+	background: #2189bf;
+}
+.header .logo{
+	margin-top: 10px;
+	margin-left: 50px;
+	width: 34px;
+	height: 34px;
+	position: relative;
+}
+.header .logo i{
+	background-color: #fff;
+	width: 16px;
+	height: 16px;
+	float: left;
+}
+.header .logo .top-left{
+	border-left: 1px solid #b9daeb;
+	border-top: 1px solid #c7e1ef;
+}
+.header .logo .top-right{
+	border-top: 1px solid #c7e1ef;
+	border-right: 1px solid #74b6d7;
+	border-bottom: 1px solid #d5e9f3;
+}
+.header .logo .bottom-left{
+	border-left: 1px solid #b9daeb;
+	border-bottom: 1px solid #66aed3;
+	border-right: 1px solid #e3f0f7;
+	margin-top: -1px;
+}
+.header .logo .bottom-right{
+	border-right: 1px solid #74b6d7;
+	border-bottom: 1px solid #66aed3;
+	width:13px;
+	height:13px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.header .search{
+	float: right;
+}
