@@ -1,23 +1,29 @@
 /*reset*/
+body,
+button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
 html,body,div,section{
 	margin: 0;
 	padding: 0;
 }
+a{text-decoration: none;}
 /*header*/
 .header{
+	position: relative;
 	padding:10px 0 10px 50px;
 	background: #2189bf;
 }
+/*logo*/
 .header .logo{
-
-	width: 34px;
-	height: 34px;
-	position: relative;
+	width: 36px;
+	height: 36px;
 }
 .header .logo i{
 	background-color: #fff;
-	width: 16px;
-	height: 16px;
+	width: 17px;
+	height: 17px;
 	float: left;
 }
 .header .logo .top-left{
@@ -36,14 +42,41 @@ html,body,div,section{
 	margin-top: -1px;
 }
 .header .logo .bottom-right{
+	border-left: 1px solid #f1f8fb;
 	border-right: 1px solid #74b6d7;
 	border-bottom: 1px solid #66aed3;
 	width:13px;
-	height:13px;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-}
-.header .search{
+	height:14px;
 	float: right;
+	margin-top: 2px;
+}
+/*搜索框和登录*/
+.header .search{
+	position: absolute;
+	right: 94px;
+	top: 14px;
+}
+.header .search>input[type="text"]{
+	border-top: 1px solid #abd3e7;
+	border-bottom: 1px solid #abd3e7;
+	border-left: none;
+	border-right: none;
+	border-radius: 2em;
+	padding-left: 46px;
+	width: 310px;
+	height: 26px;
+	background: url(icon/search.png) 18px center no-repeat #fff;
+}
+
+.header .search a{
+	display: inline-block;
+	width:24px;
+	height: 13px;
+	line-height: 13px;
+	font-family: "黑体";
+	color: #fff;
+	background: url(icon/person_icon.png) left center no-repeat;
+	padding-left: 18px;
+	padding-top:2px;
+	margin-left:20px; 
 }
