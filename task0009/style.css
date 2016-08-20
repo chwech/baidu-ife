@@ -4,7 +4,7 @@ button, input, select, textarea { /* for ie */
     /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
     font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
 }
-html,body,div,section{
+html,body,div,section,p{
 	margin: 0;
 	padding: 0;
 }
@@ -79,4 +79,58 @@ a{text-decoration: none;}
 	padding-left: 18px;
 	padding-top:2px;
 	margin-left:20px; 
+}
+/*sidebar开始*/
+.main .sidebar{
+	width: 260px;
+	background-color: #2a2e3d;
+}
+.sidebar-top span.circle{
+	border: 1px solid #ecebec;
+	display: inline-block;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	float: left;
+	margin-left: 46px;
+	margin-top: 18px;
+}
+.sidebar-top span.circle:after{
+	content: "";
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background-color: #bababe;
+	margin:4px 0 0 4px;
+}
+
+.sidebar-top span.circle+p{
+	color: #f6f5f5;
+	font: 16px/1 "黑体";
+	float: left;
+	margin: 40px 0 0 18px;
+}
+.sidebar-top .collect-fan{
+	clear: both;
+	padding: 21px 0 22px 62px;
+	overflow: hidden;
+}
+.sidebar-top .collect-fan span{
+	font: 16px/1 "黑体";
+	color: #6e8095;
+
+}
+.sidebar-top .collect-fan p{
+	color: #6e8095;
+	line-height: 16px;
+}
+.collect-fan .left{
+	padding-right: 30px;
+	float: left;
+	border-right: 2px solid #313545;
+}
+.collect-fan .right{
+	float: left;
+	padding-left: 30px;
 }
