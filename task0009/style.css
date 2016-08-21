@@ -4,10 +4,11 @@ button, input, select, textarea { /* for ie */
     /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
     font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
 }
-html,body,div,section,p{
+html,body,div,section,p,ul,li{
 	margin: 0;
 	padding: 0;
 }
+li{list-style: none;}
 a{text-decoration: none;}
 /*header*/
 .header{
@@ -85,6 +86,7 @@ a{text-decoration: none;}
 	width: 260px;
 	background-color: #2a2e3d;
 }
+/*sidebar-top*/
 .sidebar-top span.circle{
 	border: 1px solid #ecebec;
 	display: inline-block;
@@ -133,4 +135,68 @@ a{text-decoration: none;}
 .collect-fan .right{
 	float: left;
 	padding-left: 30px;
+}
+
+/*sidebar-middle*/
+.sidebar .sidebar-middle{
+	background-color: #383d4e;
+	padding-bottom: 14px;
+}
+.sidebar-middle>ul{
+	background: url(icon/task_1_9_1_06.png) 44px 12px no-repeat;
+	font-family: "黑体";
+
+	padding-left: 68px;
+	padding-top: 14px;
+}
+.sidebar-middle>ul>a{
+	color: #ededef;
+}
+.sidebar-middle li>a{
+	color: #67778c;
+	
+}
+.sidebar-middle li{
+	padding-top: 18px;
+}
+.sidebar-middle>ul li{
+	list-style:url(icon/task_1_9_1_11.png);
+	margin-left: 14px;
+	padding-left: 16px;
+	background: url(icon/task_1_9_1_13.png) left 18px no-repeat;
+}
+.sidebar-middle .folder{
+	
+	background: url(icon/task_1_9_1_17.png) left 18px no-repeat;
+	list-style:url(icon/task_1_9_1_19.png);
+}
+.sidebar-middle .folder>a{
+	color: #e1e1e4;
+}
+.sidebar-middle .folder>ul li{
+	margin-left:0;
+	background: url(icon/task_1_9_1_27.png) left 18px no-repeat;
+	list-style: none;
+}
+
+/*sidebar-bottom*/
+.sidebar-bottom ul{
+	line-height: 44px;
+	padding-left: 44px;
+}
+.sidebar-bottom li>a{
+	font-family: "黑体";
+	color: #6e8096;
+	padding-left: 24px;
+}
+.sidebar-bottom .list-style1{
+	background:url(icon/task_1_9_1_29.png) left center no-repeat;
+
+}
+.sidebar-bottom .list-style2{
+	background:url(icon/task_1_9_1_32.png) left center no-repeat;
+
+}
+.sidebar-bottom .list-style3{
+	background:url(icon/task_1_9_1_34.png) left center no-repeat;
 }
