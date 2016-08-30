@@ -53,28 +53,34 @@ function renderAqiList() {
 		btn.appendChild(td2_text);
 	}
 }
+function deleteaqidata(){
+	var del_btn = document.getElementsByClassName('button'); 
+		for (var i = 0; i < del_btn.length; i++) {
+	  	(function(e){
+	  		del_btn[e].onclick = function () {
+		  		var index = del_btn[e].parentNode.previousSibling.previousSibling.childNodes[0].nodeValue;
+		 			delete aqiData[index];
+		 			delBtnHandle();		
+		  	}
+	  	})(i); 	
+	  }
+}
 function addBtnHandle() {
   addAqiData();
   renderAqiList();
-  var del_btn = document.getElementsByClassName('button');
-  for (var i = 0; i < del_btn.length; i++) {
-  	del_btn[i].onclick = function () {
-  		
-  		
-  	}
-  }
+  deleteaqidata();
 }
+
 function delBtnHandle() {
-	
-	
   renderAqiList();
+  deleteaqidata();
 }
 
 function init() {
   // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
 	var add_btn = document.getElementById('add-btn');
-	add_btn.addEventListener("click" ,addBtnHandle , false);
-	
+	    add_btn.addEventListener("click" ,addBtnHandle , false);
+  
 	
 }
 window.onload = init;
