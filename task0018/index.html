@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模拟队列</title>
+	<style>
+		#reader div{
+			float: left;
+			width: 50px;
+			height: 50px;
+			color: #fff;
+			background-color: #ff0000;
+			text-align: center;
+			line-height: 50px;
+			margin-right: 5px;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="input-box">
+	<input type="button" id="left-in" value="左侧入">
+	<input type="button" id="right-in" value="右侧入">
+	<input type="button" id="left-out" value="左侧出">
+	<input type="button" id="right-out" value="右侧出">
+	<div id="reader">
+	</div>
+	<script src="EventUtil.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
