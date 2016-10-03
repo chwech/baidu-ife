@@ -28,7 +28,7 @@
 		}
 		#demo ul>li>a{
 			font:22px/62px "Hiragino Sans GB", "Hiragino Sans GB W3"," 微软雅黑";
-			color:#0a8cd2;
+			color:#000;
 		}
 		#demo section{
 			font-size: 22px;
@@ -40,6 +40,12 @@
 		#demo>ol li ul{
 			padding-left: 30px;
 			display: none; 
+		}
+		.show{
+			display: block;
+		}
+		.hide{
+			display: none;
 		}
 	</style>
 </head>
@@ -84,10 +90,10 @@
 		</section>
 		<section>
 			<li class="ol-li">
-				<h2><a href="#">html/css基础</a></h2>
+				<h2><a href="#">综合练习</a></h2>
 				<ul>
-					<li><a href="#">随便打的字</a></li>
-					<li><a href="#">随便打的字</a></li>
+					<li><a href="https://chwech.github.io/psd-to-html/">切页面</a></li>
+					<li><a href="#">DOM操作-图片库</a></li>
 					<li><a href="#">随便打的字</a></li>
 					<li><a href="#">随便打的字</a></li>
 					<li><a href="#">随便打的字</a></li>
@@ -125,13 +131,15 @@
 			this.style.backgroundColor = "#393";
 			this.style.color = "#fff";
 			this.style.borderRadius = 5 + "px";
-			this.style.opacity = 0.9;
-			this.style.paddingLeft = 30 + "px";
+			// this.style.opacity = 0.9;
+			// this.style.paddingLeft = 30 + "px";
+			startMove(this, {"padding-left": "30", "opacity": "90"});
 		}
 		function mouseoutHandler(){
 			this.style.backgroundColor = "#fff";
 			this.style.color = "#0a8cd2";
-			this.style.paddingLeft = 0 + "px";
+			// this.style.paddingLeft = 0 + "px";
+			startMove(this, {"padding-left": "0", "opacity" :"80"});
 		}		
 		//执行函数
 		function init(){
@@ -141,5 +149,6 @@
 	};
 </script> 
 <script src="script/EventUtil.js"></script>
+<script src="script/move.js"></script>
 </body>
 </html>
