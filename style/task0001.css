@@ -1,0 +1,131 @@
+*{
+	padding:0; 
+	margin:0;
+}
+
+body{
+	background-color: gray;
+	font-family: "Microsoft Yahei";
+}
+
+/*头部*/
+h1,#foot{
+	color: #fff;
+}
+h1{
+	padding: 20px 0 20px 40px;
+}
+#head{
+	background-color: #000;
+	
+}
+
+.ul{
+	float: right;
+	margin-top: -50px;
+	
+}
+
+.guide{
+	float: left;
+	margin-right: 20px;
+}
+ul a{
+	color: white;
+	text-decoration: none;
+}
+
+/*主体*/
+
+#mainbody{
+	
+	position: relative;
+	line-height: 2em;
+}
+.passage img{
+	width: 25%;
+	height: 25%;
+}
+.passage,.img{
+	margin: 20px 380px 20px 20px;
+	background-color: #fff;
+	padding: 50px 20px;
+}
+.img{
+	overflow: hidden;
+}
+.img img{
+	width:80%;
+	height: 80%;
+}
+
+.imgbox{
+	border: 1px solid gray;
+	width:100px;
+	height: 100px;
+	padding:15px;
+	margin: 20px 20px;
+	float: left;
+}
+
+ol{
+	margin-left:20px;
+}
+/*侧栏*/
+#sidebar{
+	width:300px;
+	background-color: #fff;
+	padding: 50px 20px;
+	position: absolute;
+	top:0;
+	right: 20px;
+}
+
+#sidebar h2{
+	border-left: 3px solid gray;
+	padding-left: 10px;
+}
+form{
+	position: relative;
+
+}
+
+input[type=submit]{
+	font-size: 16px;
+	color: white;
+	width:100%;
+	background-color: #06f;
+	padding: 10px 0;
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+	border-radius: 15px;
+}
+
+/*底部*/
+#foot{
+	background-color: #000;
+	text-align: center;
+	padding: 30px 0 50px;
+}
+
+p{
+	text-indent: 2em;
+}
+
+.passage ul{
+	list-style: none;
+}
+table{
+	width:100%;
+	border:none;
+}
+table th{
+	background-color: black;
+	color: white;
+}
+
+.sum{
+	background-color: gray;
+
+}

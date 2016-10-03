@@ -1,0 +1,55 @@
+/*可恶的冲突bug*/
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.wrap{
+	background-color: #ccc;
+	border: 1px solid #999;
+	line-height: 1.5em;
+	margin: 20px 20px 0;
+	padding: 20px;
+	min-height: 442px; /*关键属性，当元素设置了position:absolute后，元素脱离了标准文档流后，父元素自适应高度对其不起作用，需要设置父元素的最小高度包含它*/
+}
+.teamlogo{
+	width: 158px;
+	border: 1px solid #999;
+	background-color: #fff;
+	padding: 20px 20px 0;
+	position: absolute;
+	
+}
+
+.introdution{
+	
+	border: 1px solid #999;
+	background-color: #fff;
+	padding: 20px;
+	margin:0 140px 0 220px;
+
+}
+
+.partnerlogo{
+	width: 78px;	
+	border: 1px solid #999;
+	padding: 20px 20px 0;
+	background-color: #fff;
+	position: absolute;
+	top:41px;
+	right: 41px;
+}
+
+img{
+	margin-bottom: 20px;
+}
+
+span{
+	position: relative;
+	top:-80px;
+	left: 10px;
+}
+
+p{
+	text-indent: 2em;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style>
+		html,body,ol,ul,li,h2{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+			display: block;
+			width: 100%;
+
+		}
+		ul{
+			list-style: none;
+		}
+		#demo{
+			border:2px solid #ccc;
+			width: 542px;
+			margin: 20px auto 0;
+		}
+		#demo h2>a{
+			font:bold 22px/62px "Hiragino Sans GB", "Hiragino Sans GB W3", "微软雅黑";
+			color:#0a8cd2;
+		}
+		#demo ul>li>a{
+			font:22px/62px "Hiragino Sans GB", "Hiragino Sans GB W3"," 微软雅黑";
+			color:#0a8cd2;
+		}
+		#demo section{
+			font-size: 22px;
+			line-height: 62px;
+		}
+		#demo>ol{
+			padding: 60px 60px 60px 90px;
+		}
+		#demo>ol li ul{
+			padding-left: 30px;
+			display: none; 
+		}
+	</style>
+</head>
+<body>
+<main class="demo" id="demo">
+	<ol>
+		<section>
+			<li class="ol-li">
+				<h2><a href="#">html &amp; css基础</a></h2>
+				<ul>
+					<li><a href="http://chwech.github.io/baidu-ife/task0001/" title="基本布局">基本布局</a></li>
+					<li><a href="http://chwech.github.io/baidu-ife/task0003/">三栏布局</a></li>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+				</ul>
+			</li>
+		</section>
+		<section>
+			<li class="ol-li">
+				<h2><a href="#">html/css基础</a></h2></h2>
+				<ul>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+				</ul>
+			</li>
+		</section>
+		<section>
+			<li class="ol-li">
+				<h2><a href="#">html/css基础</a></h2>
+				<ul>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+				</ul>
+			</li>
+		</section>
+		<section>
+			<li class="ol-li">
+				<h2><a href="#">html/css基础</a></h2>
+				<ul>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+					<li><a href="#">随便打的字</a></li>
+				</ul>
+			</li>
+		</section>
+	</ol>
+</main>
+<script>
+	window.onload = function(){
+		var aTag = document.getElementsByTagName('a');
+		var h2 = document.getElementsByTagName('h2');
+		var ul = document.getElementsByTagName('ul');
+		//绑定事件函数
+		function bindEvent(){
+			for(let i = 0; i < aTag.length; ++i){
+				EventUtil.addHandler(aTag[i], "mouseover", mouseoverHandler);
+				EventUtil.addHandler(aTag[i], "mouseout", mouseoutHandler);
+			}
+			for (let j = 0; j < h2.length; j++) {
+				EventUtil.addHandler(h2[j], "click", function(){
+					clickHandler.call(ul[j]);
+				});
+			}
+		}
+//事件处理函数
+		function clickHandler(){
+			if(this.style.display === "block"){
+				this.style.display = "none";
+			}else{
+				this.style.display = "block";
+			}
+		} 
+		function mouseoverHandler(){
+			this.style.backgroundColor = "#393";
+			this.style.color = "#fff";
+			this.style.borderRadius = 5 + "px";
+			this.style.opacity = 0.9;
+			this.style.paddingLeft = 30 + "px";
+		}
+		function mouseoutHandler(){
+			this.style.backgroundColor = "#fff";
+			this.style.color = "#0a8cd2";
+			this.style.paddingLeft = 0 + "px";
+		}		
+		//执行函数
+		function init(){
+			bindEvent();
+		}
+		init();	
+	};
+</script> 
+<script src="script/EventUtil.js"></script>
+</body>
+</html>
