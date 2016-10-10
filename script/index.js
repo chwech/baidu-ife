@@ -1,9 +1,8 @@
 var aTag = document.getElementsByTagName('a');
 var h2 = document.getElementsByTagName('h2');
 var ul = document.getElementsByTagName('ul');
-
 function bindEvent(){
-	for(let i = 0; i < aTag.length; ++i){
+	for(let i = 0, len = aTag.length;i < len; i++){
 		EventUtil.addHandler(aTag[i], "mouseover", mouseoverHandler);
 		EventUtil.addHandler(aTag[i], "mouseout", mouseoutHandler);
 	}
