@@ -2,20 +2,23 @@ var aTag = document.getElementsByTagName('a');
 var h2 = document.getElementsByTagName('h2');
 var ul = document.getElementsByTagName('ul');
 function bindEvent(){
-	for(let i = 0, len = aTag.length;i < len; i++){
+	for(var i = 0, len = aTag.length;i < len; i++){
 		EventUtil.addHandler(aTag[i], "mouseover", mouseoverHandler);
 		EventUtil.addHandler(aTag[i], "mouseout", mouseoutHandler);
 	}
-	for(let i = 0; i < h2.length; i++) {
-		h2[i].index = i;//为h2创建索引 
+	for(var i = 0; i < h2.length; i++) {
+		h2[i].index = i;//为h2创建索引
+		var timer = null; 
 		h2[i].onclick = function(){
 			console.log(this.index);
-			for (let j = 0; j < ul.length; j++) {
-				ul[j].className = "hide";
-				
-			}
-			ul[this.index].className = "show";
-		}
+			var that = this;
+			timer = setTimeout(function(){
+				for (var j = 0; j < ul.length; j++) {
+					ul[j].className = "hide";
+					ul[that.index].className = "show";
+				}	
+			}, 300);
+		};
 	}
 }
 
