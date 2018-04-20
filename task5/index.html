@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IFE JavaScript Task 04</title>
+  <style>
+    .display-box {
+      font-size: 0;
+    }
+    .display-box div {
+      display: inline-block;
+      width: 10px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <input type="number" id="text">
+  <input type="button" value="左侧入" id="left-in">
+  <input type="button" value="右侧入" id="right-in">
+  <input type="button" value="左侧出" id="left-out">
+  <input type="button" value="右侧出" id="right-out">
+  <input type="button" value="排序" id="sort">
+  <div id="display-box" class="display-box"></div>
+  <script>
+    (function() {
+      var leftInBtn = document.querySelector('#left-in')
+      var rightInBtn = document.querySelector('#right-in')
+      var leftOutBtn = document.querySelector('#left-out')
+      var rightOutBtn = document.querySelector('#right-out')
+      var textInput = document.querySelector('#text')
+      var displayBox = document.querySelector('#display-box')
+      var sort = document.querySelector('#sort')
+      textInput.addEventListener('change', function() {
+        if (this.value > 100 || this.value < 10) {
+          this.value = ''
+          alert('请输入大于10，小于100的数字')
+        }
+      }, false)
+      function validate() {
+        if (displayBox.childNodes.length > 60) {
+          return false
+        }
+        return true
+      }
+      // 在列表末尾添加元素
+      function push() {
+        if(!validate()) {
+          alert('不能超过60个元素')
+          return
+        }
+        var div = document.createElement('div')
+        div.style.height = textInput.value + 'px'
+        displayBox.appendChild(div)
+      }
+
+      // 在列表头部添加元素
+      function unshift() {
+        if(!validate()) {
+          alert('不能超过60个元素')
+          return
+        }
+        var div = document.createElement('div')
+        div.style.height = textInput.value + 'px'
+        displayBox.insertBefore(div, displayBox.firstChild)
+      }
+
+      // 删除头部元素
+      function shift() {
+        displayBox.removeChild(displayBox.firstChild)
+      }
+
+      // 删除尾部元素
+      function pop() {
+        displayBox.removeChild(displayBox.lastChild)
+      }
+      
+      // 事件委托，删除点击元素
+      displayBox.addEventListener('click', function(e) {
+        this.removeChild(e.target)
+      }, false)
+      
+      sort.addEventListener('click', function() {
+        var nodes = displayBox.childNodes
+        var array = []
+        for (var i = 0; i < nodes.length; i++) {
+          array.push(parseInt(nodes[i].style.height))
+        }
+        // 简单冒泡排序
+        for (var j = 0; j < array.length; j++) {
+          for (var k = 0; k < array.length; k++) {
+            if (array[j] < array[k]) {
+              var temp = array[j]
+              array[j] = array[k]
+              array[k] = temp
+            }
+          }
+        }
+        displayBox.innerHTML = ''
+        console.log(array)
+        array.forEach(function(height) {
+          var div = document.createElement('div')
+          div.style.height = height + 'px'
+          displayBox.appendChild(div)
+        })
+      }, false)
+
+      leftInBtn.addEventListener('click', unshift, false)
+      rightInBtn.addEventListener('click', push, false)
+      leftOutBtn.addEventListener('click', shift, false)
+      rightOutBtn.addEventListener('click', pop, false)
+
+    })()
+  </script>
+</body>
+</html>
