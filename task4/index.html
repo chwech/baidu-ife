@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IFE JavaScript Task 04</title>
+</head>
+<body>
+  <input type="text" id="text">
+  <input type="button" value="左侧入" id="left-in">
+  <input type="button" value="右侧入" id="right-in">
+  <input type="button" value="左侧出" id="left-out">
+  <input type="button" value="右侧出" id="right-out">
+
+  <div id="display-box">
+
+  </div>
+  <script>
+    (function() {
+      var leftInBtn = document.querySelector('#left-in')
+      var rightInBtn = document.querySelector('#right-in')
+      var leftOutBtn = document.querySelector('#left-out')
+      var rightOutBtn = document.querySelector('#right-out')
+      var textInput = document.querySelector('#text')
+      var displayBox = document.querySelector('#display-box')
+
+      // 在列表末尾添加元素
+      function push() {
+        var div = document.createElement('div')
+        div.innerText = textInput.value
+        displayBox.appendChild(div)
+      }
+
+      // 在列表头部添加元素
+      function unshift() {
+        var div = document.createElement('div')
+        div.innerText = textInput.value
+        displayBox.insertBefore(div, displayBox.firstChild)
+      }
+
+      // 删除头部元素
+      function shift() {
+        displayBox.removeChild(displayBox.firstChild)
+      }
+
+      // 删除尾部元素
+      function pop() {
+        displayBox.removeChild(displayBox.lastChild)
+      }
+      
+      // 事件委托，删除点击元素
+      displayBox.addEventListener('click', function(e) {
+        this.removeChild(e.target)
+      }, false)
+
+      leftInBtn.addEventListener('click', unshift, false)
+      rightInBtn.addEventListener('click', push, false)
+      leftOutBtn.addEventListener('click', shift, false)
+      rightOutBtn.addEventListener('click', pop, false)
+
+    })()
+  </script>
+</body>
+</html>
