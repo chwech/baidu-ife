@@ -91,10 +91,10 @@
         // 简单冒泡排序
         for (var j = 0; j < array.length; j++) {
           for (var k = 0; k < array.length; k++) {
-            if (array[j] < array[k]) {
-              var temp = array[j]
-              array[j] = array[k]
-              array[k] = temp
+            if (array[k] > array[k + 1]) {
+              var temp = array[k]
+              array[k] = array[k + 1]
+              array[k + 1] = temp
             }
           }
         }
