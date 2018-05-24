@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">    
+  <head>
+    <meta charset="UTF-8">
     <title>IFE ECMAScript</title>
-</head>
-<body>        
+  </head>
+
+  <body>
     <input id="first-number" type="number" value="0" placeholder="第一个数字">
     <input id="second-number" type="number" value="0" placeholder="第二个数字">
     <button id="add-btn">加</button>
@@ -13,18 +14,56 @@
     <button id="divide-btn">除</button>
     <p id="result">运算结果</p>
     <script>
-      var addBtn = document.getElementById('add-btn')
-      var minusBtn = document.getElementById('minus-btn')
-      var timesBtn = document.getElementById('times-btn')
-      var divideBtn = document.getElementById('divide-btn')
-      var result = document.getElementById('result')
-      addBtn.addEventListener('click', function add() {
-        result.innerText = '运算结果:'
-        var firstNumber = document.getElementById('first-number').value
-        var secondNumber = document.getElementById('second-number').value
-        var sum = Number(firstNumber) + Number(secondNumber)
-        result.innerText += sum 
-      })
+      (function () {
+        var $ = function (selector) {
+          var ele
+          if (typeof selector !== 'string') {
+            throw new Error('请输入字符串选择符')
+            return
+          }
+          if (selector.indexOf('#') >= 0) {
+            ele = document.getElementById(selector.slice(1))
+          }
+          return ele
+        }
+        var addBtn = $('#add-btn')
+        var minusBtn = $('#minus-btn')
+        var timesBtn = $('#times-btn')
+        var divideBtn = $('#divide-btn')
+        var result = $('#result')
+
+        addBtn.addEventListener('click', function add() {
+          result.innerText = '运算结果:'
+          var firstNumber = $('#first-number').value
+          var secondNumber = $('#second-number').value
+          var sum = Number(firstNumber) + Number(secondNumber)
+          result.innerText += sum
+        })
+
+        minusBtn.addEventListener('click', function add() {
+          result.innerText = '运算结果:'
+          var firstNumber = $('#first-number').value
+          var secondNumber = $('#second-number').value
+          var sum = Number(firstNumber) - Number(secondNumber)
+          result.innerText += sum
+        })
+
+        timesBtn.addEventListener('click', function add() {
+          result.innerText = '运算结果:'
+          var firstNumber = $('#first-number').value
+          var secondNumber = $('#second-number').value
+          var sum = Number(firstNumber) * Number(secondNumber)
+          result.innerText += sum
+        })
+
+        divideBtn.addEventListener('click', function add() {
+          result.innerText = '运算结果:'
+          var firstNumber = $('#first-number').value
+          var secondNumber = $('#second-number').value
+          var sum = Number(firstNumber) / Number(secondNumber)
+          result.innerText += sum
+        })
+      }())
     </script>
-</body>
+  </body>
 </html>
